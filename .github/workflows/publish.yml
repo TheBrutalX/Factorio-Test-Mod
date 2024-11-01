@@ -1,0 +1,32 @@
+name: Publish Factorio Mod
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-mod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Validate Mod
+        uses: actions/factorio-mod-uploader@0.0.1
+        with:
+          action: validate
+          mod-dir: ./test_mod
+
+      - name: Create zip
+        uses: actions/factorio-mod-uploader@0.0.1
+        with:
+          action: compress
