@@ -1,9 +1,6 @@
 name: Publish Factorio Mod
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   publish-mod:
@@ -17,16 +14,12 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Validate Mod
-        uses: actions/factorio-mod-uploader@0.0.1
+        uses: TheBrutalX/factorio-mod-uploader-action@0.0.5
         with:
           action: validate
-          mod-dir: ./test_mod
 
       - name: Create zip
-        uses: actions/factorio-mod-uploader@0.0.1
+        uses: TheBrutalX/factorio-mod-uploader-action@0.0.5
         with:
           action: compress
