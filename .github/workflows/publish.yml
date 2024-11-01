@@ -15,6 +15,6 @@ jobs:
           node-version: '16'
 
       - name: Validate Mod
-        uses: TheBrutalX/factorio-mod-uploader-action@0.0.9
+        uses: TheBrutalX/factorio-mod-uploader-action@0.0.10
         with:
           action: validate
