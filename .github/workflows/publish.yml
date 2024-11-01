@@ -15,11 +15,12 @@ jobs:
           node-version: '16'
 
       - name: Validate Mod
-        uses: TheBrutalX/factorio-mod-uploader-action@0.0.6
+        uses: TheBrutalX/factorio-mod-uploader-action@0.0.7
         with:
           action: validate
+          mod-folder: ./${{ env.SOURCE_FOLDER }}
 
       - name: Create zip
-        uses: TheBrutalX/factorio-mod-uploader-action@0.0.6
+        uses: TheBrutalX/factorio-mod-uploader-action@0.0.7
         with:
           action: compress
