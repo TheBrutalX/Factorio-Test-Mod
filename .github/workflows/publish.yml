@@ -17,9 +17,6 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Validate Mod
         uses: TheBrutalX/factorio-mod-uploader-action@0.0.1
         with:
