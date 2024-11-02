@@ -1,6 +1,9 @@
 name: Publish Factorio Mod
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   publish-mod:
@@ -12,9 +15,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
 
       - name: Validate Mod
-        uses: TheBrutalX/factorio-mod-uploader-action@0.0.9
+        uses: TheBrutalX/factorio-mod-uploader-action@1.0.1
         with:
           action: validate
+
+      - name: Create zip
+        uses: TheBrutalX/factorio-mod-uploader-action@1.0.1
+        with:
+          action: compress
+      
+      - name: Upload Mod
+        uses: TheBrutalX/factorio-mod-uploader-action@1.0.1
+        with:
+          action: upload
+          factorio-api-key: ${{ secrets.FACTORIO_API_KEY }}
