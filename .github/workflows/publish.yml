@@ -1,10 +1,11 @@
 name: Publish Factorio Mod
 
 on: 
-  pull_request: 
+  pull_request:
     branches:
-      - master
-
+      - main
+    paths:
+      - 'dev/**'
 jobs:
   publish-mod:
     runs-on: ubuntu-latest
