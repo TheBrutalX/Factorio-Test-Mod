@@ -4,8 +4,7 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'dev/**'
+
 jobs:
   publish-mod:
     runs-on: ubuntu-latest
