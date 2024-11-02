@@ -1,7 +1,7 @@
 name: Publish Factorio Mod
 
 on: 
-  push:
+  pull_request: 
     branches:
       - master
 
