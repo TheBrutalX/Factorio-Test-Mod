@@ -1,0 +1,24 @@
+### From This ###
+# This file
+.factorioignore
+# Ignore git directory
+.git/
+# Ignore github directory
+.github/
+# Ignore gitignore file
+.gitignore
+# Ignore log files
+.log
+# Ignore tmp directory
+.tmp
+# Ignore vscode directory
+.vscode/
+# Ignore backup files
+*.bak
+# Ignore tmp files
+*.tmp
+# Ignore tmp files
+*.tmp.*
+#### to This is always ignored by Factorio Mod Uploader ###
+# Test files
+file_to_ignore.txt
