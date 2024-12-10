@@ -4,7 +4,7 @@ This repository contains a test mod for the `factorio-mod-uploader-action`. The 
 
 ## Usage
 
-1. Clone this repository.
+1. Clone this repository [link](https://github.com/TheBrutalX/Factorio-Test-Mod/)
 2. Make any necessary modifications to the mod.
 3. Use the `factorio-mod-uploader-action` to upload the mod to the Factorio mod portal.
 

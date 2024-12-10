@@ -1,0 +1,10 @@
+mod_info:
+  description_file: README.md
+  summary: A test mod for testing the GitHub Actions workflow
+  title: Test Mod
+  attach_source_link: true
+  license: default_mit
+  category: internal
+  tags:
+    - environment
+    - obviouslyAnError
