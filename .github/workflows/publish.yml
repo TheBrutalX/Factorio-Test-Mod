@@ -1,9 +1,12 @@
 name: Publish Factorio Mod
 
-on: 
-  push: 
+on:
+  push:
     branches:
       - main
+
+env:
+  factorioModUploaderVersion: latest
 
 jobs:
   publish-mod:
@@ -13,17 +16,17 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate Mod
-        uses: TheBrutalX/factorio-mod-uploader-action@v1
+        uses: TheBrutalX/factorio-mod-uploader-action@latest
         with:
           action: validate
 
       - name: Create zip
-        uses: TheBrutalX/factorio-mod-uploader-action@v1
+        uses: TheBrutalX/factorio-mod-uploader-action@latest
         with:
           action: compress
-      
+
       - name: Upload Mod
-        uses: TheBrutalX/factorio-mod-uploader-action@v1
+        uses: TheBrutalX/factorio-mod-uploader-action@latest
         with:
           action: upload
           factorio-api-key: ${{ secrets.FACTORIO_API_KEY }}
