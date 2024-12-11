@@ -29,4 +29,4 @@ jobs:
         uses: TheBrutalX/factorio-mod-uploader-action@latest
         with:
           action: upload
-          factorio_api_key: ${{ secrets.FACTORIO_API_KEY }}
+          factorio-api-key: ${{ secrets.FACTORIO_API_KEY }}
