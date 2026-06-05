@@ -19,7 +19,10 @@
 *.tmp
 # Ignore tmp files
 *.tmp.*
-#### to This is always ignored by Factorio Mod Uploader ###
-#### In this example i report just for documentation ###
+#### Files always ignored by Factorio Mod Uploader (default patterns) ###
+# These are automatically excluded:
+# .factorioignore, .git, .github, .gitignore, .vscode, *.tmp, *.log, *.bak
+#### Documentation ####
+# In this example i report just for documentation
 # Test files
 file_to_ignore.txt

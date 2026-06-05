@@ -1,10 +1,11 @@
 mod_info:
   description_file: README.md
-  summary: A test mod for testing the GitHub Actions workflow
+  summary: A test mod for testing the GitHub Actions workflow with auto-update feature
   title: Test Mod
+  author: TheBrutalX
   attach_source_link: true
   license: mit
   category: internal
   tags:
     - environment
-    - obviouslyAnError
+  homepage: https://github.com/TheBrutalX/Factorio-Test-Mod

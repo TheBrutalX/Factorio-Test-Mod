@@ -4,9 +4,8 @@ on:
   push:
     branches:
       - main
-
-env:
-  factorioModUploaderVersion: latest
+  release:
+    types: [published]
 
 jobs:
   publish-mod:
@@ -24,6 +23,7 @@ jobs:
         uses: TheBrutalX/factorio-mod-uploader-action@v2
         with:
           action: compress
+          auto-update-version: 'true'
 
       - name: Upload Mod
         uses: TheBrutalX/factorio-mod-uploader-action@v2
